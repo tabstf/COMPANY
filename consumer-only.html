@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consumer Only - ShelfEat</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Verdana, sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #e6f5e9, #cde3d3);
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(90deg, #A9BA9D , #49796B);
+            color: #fff;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            padding: 1rem;
+            background: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            color: #40826D;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #00573F;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 3rem 1rem;
+            background: linear-gradient(90deg, #49796B , #A9BA9D);
+            color: #fff;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        section {
+            padding: 3rem 1rem;
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        section h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .model-preview, .product-list {
+            margin-top: 2rem;
+        }
+
+        .model-preview {
+            text-align: left;
+            padding: 1rem;
+            background: #f4f4f4;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .model-preview h4 {
+            font-size: 1.5rem;
+            color: #40826D;
+        }
+
+        .model-preview p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .product-list {
+            margin-top: 2rem;
+        }
+
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 1rem;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .card:hover {
+            background-color: #f0f8ff;
+            transform: translateY(-5px);
+        }
+
+        .card h4 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .card p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background: #fff;
+            margin-top: 3rem;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        footer p {
+            font-size: 1rem;
+            color: #00573F;
+        }
+
+        .clicked {
+            background-color: #00573F;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ShelfEat</h1>
+        <p>Empowering consumers to access affordable and sustainable products.</p>
+    </header>
+
+    <nav>
+        <a href="shelfeat-home.html">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="hero">
+        <h2>Consumer Only Access</h2>
+        <p>Explore exclusive deals on ready-to-expire products and make a difference by reducing food waste. Join the community of smart and sustainable consumers!</p>
+    </div>
+
+    <section>
+        <h3>Limited Predictive Model (Local Regions)</h3>
+        <div class="model-preview">
+            <h4>Local Region Insights</h4>
+            <p><strong>Select Region:</strong></p>
+            <select id="region-select" 
+                    style="padding: 0.5rem; font-size: 1rem; font-family: Verdana, sans-serif; border-radius: 5px; border: 1px solid #ccc; margin-top: 0.5rem;">
+                <option value="Athens">Athens</option>
+                <option value="Thessaloniki">Thessaloniki</option>
+                <option value="Patras">Patras</option>
+                <option value="Heraklion">Heraklion</option>
+                <option value="Larissa">Larissa</option>
+                <option value="Volos">Volos</option>
+                <option value="Ioannina">Ioannina</option>
+                <option value="Chania">Chania</option>
+                <option value="Rhodes">Rhodes</option>
+                <option value="Kavala">Kavala</option>
+            </select>
+            <p style="margin-top: 1rem;"><strong>Prediction:</strong> High surplus of fresh produce expected this week. Suggested focus: vegetables and fruits.</p>
+            <p><strong>Tip:</strong> ...</p>
+            <div style="margin-top: 1.5rem;">
+                <button id="show-chart" class="button" style="padding: 0.5rem 1rem; font-size: 1rem; font-family: Verdana, sans-serif; background-color: #40826D; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    Show Visualization
+                </button>
+                <button id="show-text" class="button" style="padding: 0.5rem 1rem; font-size: 1rem; font-family: Verdana, sans-serif; background-color: #40826D; color: white; border: 1px solid #40826D; border-radius: 5px; cursor: pointer; margin-left: 1rem;">
+                    Show Summary
+                </button>
+            </div>
+            <div id="chart-container" style="display: none; margin-top: 1rem;">
+                <img src="samplemodel.png" alt="Predictive Model Visualization" 
+                     style="display: block; margin: auto; max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            </div>
+            <div id="text-summary" style="display: none; margin-top: 1rem; font-size: 1rem; color: #555; text-align: left; padding: 1rem; background: #f4f4f4; border-radius: 10px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+                <p><strong>Region:</strong> Selected region shows a projected x% surplus in y and z this week.</p>
+                <p><strong>Details:</strong> Predicted overproduction of x, y, and z. Consumers are advised to ...</p>
+            </div>
+        </div>
+
+        <script>
+            const showChartButton = document.getElementById('show-chart');
+            const showTextButton = document.getElementById('show-text');
+            const chartContainer = document.getElementById('chart-container');
+            const textSummary = document.getElementById('text-summary');
+            
+            const buttons = document.querySelectorAll('.button');
+
+            function resetButtonColors() {
+                buttons.forEach(button => {
+                    button.classList.remove('clicked');
+                });
+            }
+
+            showChartButton.addEventListener('click', () => {
+                resetButtonColors();
+                showChartButton.classList.add('clicked');
+                chartContainer.style.display = 'block';
+                textSummary.style.display = 'none';
+            });
+
+            showTextButton.addEventListener('click', () => {
+                resetButtonColors();
+                showTextButton.classList.add('clicked');
+                chartContainer.style.display = 'none';
+                textSummary.style.display = 'block';
+            });
+        </script>
+
+        <div class="product-list">
+            <h3>Affordable Products in Your Region</h3>
+            <div class="cards">
+                <div class="card">
+                    <h4>Fresh Apples</h4>
+                    <p>x / kg</p>
+                    <p>Expires in y days</p>
+                </div>
+                <div class="card">
+                    <h4>Whole Grain Bread</h4>
+                    <p>x / loaf</p>
+                    <p>Expires in y days</p>
+                </div>
+                <div class="card">
+                    <h4>Organic Milk</h4>
+                    <p>x / liter</p>
+                    <p>Expires in y days</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p> <strong>2025 ShelfEat</strong></p>
+    </footer>
+</body>
+</html>
