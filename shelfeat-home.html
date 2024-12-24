@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShelfEat</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Verdana, sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #e6f5e9, #cde3d3);
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(90deg, #A9BA9D, #49796B);
+            color: #fff;
+            text-align: center;
+            padding: 2rem 2rem;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+            background: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        }
+
+        nav img {
+            max-width: 150px;
+            height: auto;
+            margin-right: 2rem;
+        }
+
+        nav a {
+            color: #5e8c61;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #3c6e47;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 5rem 1rem;
+            background: linear-gradient(90deg, #49796B, #A9BA9D);
+            color: #fff;
+            opacity: 0;
+            animation: fadeIn 2s ease-in-out forwards;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .cta-button {
+            font-family: Verdana, sans-serif;
+            background: #40826D;
+            color: #fff;
+            padding: 0.75rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .cta-button:hover {
+            background: #00573F;
+            transform: scale(1.1);
+        }
+
+        section {
+            padding: 2rem 1rem;
+        }
+
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            width: 300px;
+            text-align: center;
+            transform: translateY(50px);
+            opacity: 0;
+            animation: slideUp 0.6s ease-in-out forwards;
+            transition: transform 0.3s, background-color 0.3s;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .card p {
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Hover effect for cards */
+        .card:hover {
+            background-color: #f0f8ff; /* Light background change on hover */
+            transform: translateY(-10px); /* Slightly lift the card on hover */
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* Add deeper shadow on hover */
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background: #fff;
+            margin-top: 3rem;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        footer p {
+            font-size: 1rem;
+            color: #00573F;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ShelfEat</h1>
+        <p>Empowering consumers to access affordable and sustainable products.</p>
+    </header>
+
+    <nav>
+        <img src="logo-transp.png" alt="ShelfEat Logo">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="hero">
+        <h2>Join the Fight Against Food Waste</h2>
+        <p>At ShelfEat, we're committed to reducing food waste while providing accessible solutions for consumers and businesses alike. By aligning with the United Nations' <strong>Sustainable Development Goal (SDG) 12: Responsible Consumption and Production</strong>, we aim to promote sustainable business practices that benefit both the environment and society.</p>
+        <p>Our platform helps businesses optimize their inventory and reduce excess stock, while consumers gain access to affordable, quality products that would otherwise go to waste.</p>
+        <p>Through our efforts, we contribute to the global movement to cut food losses during manufacturing and supply chains, as well as to cut food waste in half per person at the retail and consumer levels, in such way we promote a circular economy and help create a more sustainable future for everybody by enabling companies and individuals to take action.</p>
+        <button class="cta-button">Become a Member</button>
+    </div>
+
+    <section id="about">
+        <h2 style="text-align: center;">Our Mission & Vision</h2>
+        <p style="max-width: 700px; margin: 1rem auto; text-align: center;">
+            <b>Mission:</b> Our mission is to develop an innovative, user-friendly platform that connects food industries with buyers by collecting ready-to-expire goods.
+        </p>
+        <p style="max-width: 700px; margin: 1rem auto; text-align: center;"><b>Vision:</b> Our vision is to build an inclusive society where every individual has easier access to affordable, essential products.
+        </p>
+    </section>
+
+    <section id="services">
+        <h2 style="text-align: center;">Our Bundles</h2>
+        <br>
+        <div class="cards">
+            <div class="card">
+                <h3>Standard Version</h3>
+                <p>-<b>List</b> the products your business offers and manage stock.<br>-<b>Access</b> to a limited, regionalized version of our predictive model.<br>-<b>Gain insight</b> into ways to combat food waste according to region.</p>
+            </div>
+            <div class="card">
+                <h3>Premium Version</h3>
+                <p>-<b>Advanced</b> features for personalized insights and extended predictive tools to reduce waste effectively.<br>-<b>Business-specific</b> tips and approaches to food waste.</b></p>
+            </div>
+            <div class="card">
+                <a href="consumer-only.html" style="text-decoration: none; color: inherit;">
+                    <h3>Consumer Only</h3>
+                    <p>-<b>Access</b> to exclusive deals on ready-to-expire products in their region.<br>-<b>No access</b> to data analytics and predictive model</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p> <strong>2025 ShelfEat</strong></p>
+    </footer>
+</body>
+</html>
