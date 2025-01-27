@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Shelfeat</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #ffffff;
+      border-bottom: 1px solid #d2d6c9;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      z-index: 1000;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .header .nav-links {
+      display: flex;
+      gap: 20px;
+      font-size: 14px;
+      color: #4a5d23;
+      margin-left: auto;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #4a5d23;
+      padding: 5px 10px;
+      border-radius: 4px;
+    }
+
+    .nav-links a:hover {
+      background-color: #f1f1f1;
+    }
+
+    .auth-buttons {
+      display: flex;
+      gap: 10px;
+      margin-left: 20px;
+    }
+
+    .auth-buttons button {
+      padding: 8px 12px;
+      font-size: 14px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .login-button {
+      background-color: #e5e5e5;
+      color: #333;
+    }
+
+    .login-button:hover {
+      background-color: #d4d4d4;
+    }
+
+    .signup-button {
+      background-color: #4a5d23;
+      color: #ffffff;
+    }
+
+    .signup-button:hover {
+      background-color: #3a4a1c;
+    }
+
+    .login-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f9f9f9;
+      flex-direction: column;
+    }
+
+    .login-box {
+      background-color: #ffffff;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    .login-box h1 {
+      font-size: 36px;
+      color: #4a5d23;
+      margin-bottom: 20px;
+    }
+
+    .input-group {
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
+    .input-group label {
+      font-size: 14px;
+      color: #4a5d23;
+      margin-bottom: 5px;
+      display: block;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      background-color: #f1f1f1;
+      color: #333;
+    }
+
+    .input-group input:focus {
+      outline: none;
+      border-color: #4a5d23;
+      background-color: #ffffff;
+    }
+
+    .login-btn {
+      padding: 12px;
+      background-color: #4a5d23;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .login-btn:hover {
+      background-color: #3a4a1c;
+    }
+
+    .signup-link {
+      margin-top: 15px;
+      font-size: 14px;
+      color: #4a5d23;
+    }
+
+    .signup-link a {
+      text-decoration: none;
+      color: #4a5d23;
+    }
+
+    .signup-link a:hover {
+      text-decoration: underline;
+    }
+
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <div class="nav-links">
+    <a href="#">Products</a>
+    <a href="#">Businesses</a>
+    <a href="#">About us</a>
+  </div>
+</div>
+
+<div class="login-container">
+  <div class="login-box">
+    <h1>Login</h1>
+    
+    <!-- Email Input -->
+    <div class="input-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="Enter your email" required>
+    </div>
+
+    <!-- Password Input -->
+    <div class="input-group">
+      <label for="password">Password</label>
+      <input type="password" id="password" placeholder="Enter your password" required>
+    </div>
+
+    <!-- Login Button -->
+    <button class="login-btn">Log In</button>
+
+    <!-- Signup Link -->
+    <div class="signup-link">
+      <p>Don't have an account? <a href="#">Sign up</a></p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
