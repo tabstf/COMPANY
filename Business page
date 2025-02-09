@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shelfeat</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #ffffff;
+      border-bottom: 1px solid #d2d6c9;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      z-index: 1000;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .header .nav-links {
+      display: flex;
+      gap: 20px;
+      font-size: 14px;
+      color: #4a5d23;
+      margin-left: auto;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #4a5d23;
+      padding: 5px 10px;
+      border-radius: 4px;
+    }
+
+    .nav-links a:hover {
+      background-color: #f1f1f1;
+    }
+
+    .auth-buttons {
+      display: flex;
+      gap: 10px;
+      margin-left: 20px;
+    }
+
+    .auth-buttons button {
+      padding: 8px 12px;
+      font-size: 14px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .login-button {
+      background-color: #e5e5e5;
+      color: #333;
+    }
+
+    .login-button:hover {
+      background-color: #d4d4d4;
+    }
+
+    .signup-button {
+      background-color: #4a5d23;
+      color: #ffffff;
+    }
+
+    .signup-button:hover {
+      background-color: #3a4a1c;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 100px 20px;
+      background-color: #f9f9f9;
+      background-image: url('REPLACETHIS');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      font-weight: bold;
+      color: #4a5d23;
+      margin: 0;
+    }
+
+    .hero p {
+      font-size: 20px;
+      color: #6f6f6f;
+      margin: 10px 0 40px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .hero-buttons button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+
+    .nav-buttons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .nav-buttons button {
+      padding: 8px 16px;
+      background-color: #4a5d23;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 100px 20px;
+      background-color: #f9f9f9;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .plans-section {
+      max-width: 800px;
+      margin: 40px auto;
+      text-align: center;
+    }
+
+    .plan-card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .plan-card {
+      background-color: #ffffff;
+      border: 1px solid #4a5d23;
+      border-radius: 8px;
+      padding: 20px;
+      width: 300px;
+      text-align: left;
+      position: relative;
+    }
+
+    .plan-card h3 {
+      font-size: 20px;
+      color: #4a5d23;
+      margin-bottom: 10px;
+    }
+
+    .plan-card button {
+      padding: 8px 16px;
+      background-color: #4a5d23;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .form-section {
+      max-width: 500px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #ffffff;
+      border: 1px solid #4a5d23;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .form-section input, .form-section textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #d2d6c9;
+      border-radius: 4px;
+    }
+
+    .form-section button {
+      padding: 10px 20px;
+      background-color: #4a5d23;
+      color: #ffffff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .form-section button:hover {
+      background-color: #3a4a1c;
+    }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <div class="nav-links">
+    <a href="#">Products</a>
+    <a href="#">Businesses</a>
+    <a href="aboutUs.html">About us</a>
+    <div class="auth-buttons">
+      <a href="loginpage.html"><button class="login-button">Log in</button></a>
+      <a href="Register%20Page.html"><button class="signup-button">Sign up</button></a>
+    </div>
+  </div>
+</div>
+
+<div class="hero">
+  <h1>Welcome to Shelfeat</h1>
+  <h2>For Businesses</h2>
+</div>
+
+<div class="plans-section">
+  <h2>Fixed Plans for Businesses</h2>
+  <div class="plan-card-container">
+    <div class="plan-card">
+      <h3>Standard 🏅</h3>
+      <p>Body text for whatever you’d like to say. Add main takeaway points, quotes, anecdotes, or even a very very short story.</p>
+      <button>Take me there</button>
+    </div>
+    <div class="plan-card">
+      <h3>Premium 👑</h3>
+      <p>Body text for whatever you’d like to say. Add main takeaway points, quotes, anecdotes, or even a very very short story.</p>
+      <button>I want to be a VIP</button>
+    </div>
+  </div>
+
+  <h2>Custom Plans for Businesses</h2>
+  <div class="plan-card-container">
+    <div class="plan-card">
+      <h3>Custom Plan for VIP Customers 📜</h3>
+      <p>Body text for whatever you’d like to say. Add main takeaway points, quotes, anecdotes, or even a very very short story.</p>
+      <button>Take me there</button>
+    </div>
+  </div>
+</div>
+
+<div class="form-section">
+  <h2>Try the Model for Free</h2>
+  <form>
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <input type="text" placeholder="Business Name" required>
+    <input type="text" placeholder="Location" required>
+    <input type="text" placeholder="Product for Search" required>
+    <textarea placeholder="Describe your business needs" required></textarea>
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
+</body>
+</html>
