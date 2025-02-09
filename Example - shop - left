@@ -282,7 +282,7 @@
         </aside>
         <main>
             <div class="filter-bar">
-                <input type="text" placeholder="Search">
+                <input type="text" id="searchInput" placeholder="Search">
                 <button>New</button>
                 <button>Price ascending</button>
                 <button>Price descending</button>
@@ -342,5 +342,25 @@
             </div>
         </main>
     </div>
+<script type="text/javascript" defer>
+    document.addEventListener("DOMContentLoaded", function(){
+        const searchInput = document.getElementById("searchInput");
+        const productCards = document.querySelectorAll(".product-card");
+        searchInput.addEventListener("keyup", function (){
+            let filter = searchInput.value.toLowerCase();
+            productCards.forEach((card) => {
+                let productName = card.querySelector("h3").textContent.toLowerCase();
+
+                if (productName.includes(filter)){
+                    card.style.visibility = "visible";
+                    card.style.opacity = "1";
+                }else {
+                    card.style.visibility = "hidden";
+                    card.style.opacity = "0";
+                }
+            });
+        });
+    });
+</script>
 </body>
 </html>
