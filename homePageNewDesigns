@@ -318,8 +318,8 @@
     <a href="#">Businesses</a>
     <a href="aboutUs.html">About us</a>
     <div class="auth-buttons">
-      <a href="loginpage.html"><button class="login-button">Log in</button>
-      <a href="Register%20Page.html"><button class="signup-button">Sign up</button>
+      <a href="loginpage.html"><button class="login-button">Log in</button></a>
+      <a href="Register%20Page.html"><button class="signup-button">Sign up</button></a>
     </div>
   </div>
 </div>
@@ -338,7 +338,7 @@
   <div class="about-content">
     <h2>About us</h2>
     <p>Helping consumers find natural savings: grains, options, and dairy.</p>
-    <button>Learn more</button>
+    <a href="aboutUs.html"><button>Learn more</button></a>
   </div>
 </div>
 
