@@ -231,21 +231,19 @@
 <body>
     <header>
         <div class="logo">
-            <img src="https://via.placeholder.com/40" alt="Logo Placeholder">
+            <img src="assets/Company3.jpg" alt="Logo Placeholder">
         </div>
         <nav class="nav">
             <a href="#">Products</a>
             <a href="#">Businesses</a>
-            <a href="#">About us</a>
+            <a href="aboutUs.html">About us</a>
         </nav>
         <div class="auth-buttons">
             <span class="cart">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                    <path d="M7 4h-2l-3 7v2h2l3.6 7h10.8l3.6-7h2v-2l-3-7h-2l-3 7h-8l-3-7zm3 7h4v5h-4v-5zm-1 5h6v3h-6v-3z"/>
-                </svg>
+                <img src="assets/shoppingcart.png" alt="cart" width="30" height="30">
             </span>
-            <button class="login">Log in</button>
-            <button class="signup">Sign up</button>
+            <a href="loginpage.html"><button class="login-button">Log in</button></a>
+            <a href="Register%20Page.html"><button class="signup-button">Sign up</button></a>
         </div>
     </header>
     <div class="container">
@@ -292,52 +290,52 @@
             </div>
             <div class="product-grid">
                 <div class="product-card">
-                    <img src="https://via.placeholder.com/150" alt="Product">
+                    <img src="assets/milk_placeholder" alt="Product">
                     <h3>Milk</h3>
                     <p class="price">$0</p>
                 </div>
                 <div class="product-card">
-                    <img src="https://via.placeholder.com/150" alt="Product">
+                    <img src="assets/eggs_placeholder" alt="Product">
                     <h3>Eggs</h3>
                     <p class="price">$0</p>
                 </div>
                 <div class="product-card">
-                    <img src="https://via.placeholder.com/150" alt="Product">
+                    <img src="assets/milk_placeholder" alt="Product">
                     <h3>Milk</h3>
                     <p class="price">$0</p>
                 </div>
                 <div class="product-card">
-                    <img src="https://via.placeholder.com/150" alt="Product">
+                    <img src="assets/eggs_placeholder" alt="Product">
                     <h3>Eggs</h3>
                     <p class="price">$0</p>
                 </div>
                 <div class="product-card">
-                    <img src="https://via.placeholder.com/150" alt="Product">
+                    <img src="assets/milk_placeholder" alt="Product">
                     <h3>Milk</h3>
                     <p class="price">$0</p>
                 </div>
                 <div class="product-card">
-                    <img src="https://via.placeholder.com/150" alt="Product">
+                    <img src="assets/eggs_placeholder" alt="Product">
                     <h3>Eggs</h3>
                     <p class="price">$0</p>
                 </div>
                 <div class="product-card">
-                    <img src="https://via.placeholder.com/150" alt="Product">
+                    <img src="assets/milk_placeholder" alt="Product">
                     <h3>Bread</h3>
                     <p class="price">$0</p>
                 </div>
                 <div class="product-card">
-                    <img src="https://via.placeholder.com/150" alt="Product">
+                    <img src="assets/eggs_placeholder" alt="Product">
                     <h3>Cheese</h3>
                     <p class="price">$0</p>
                 </div>
                 <div class="product-card">
-                    <img src="https://via.placeholder.com/150" alt="Product">
+                    <img src="assets/milk_placeholder" alt="Product">
                     <h3>Butter</h3>
                     <p class="price">$0</p>
                 </div>
                 <div class="product-card">
-                    <img src="https://via.placeholder.com/150" alt="Product">
+                    <img src="assets/yogurt_placeholder" alt="Product">
                     <h3>Yogurt</h3>
                     <p class="price">$0</p>
                 </div>
