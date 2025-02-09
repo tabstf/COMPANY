@@ -316,10 +316,10 @@
   <div class="nav-links">
     <a href="#">Products</a>
     <a href="#">Businesses</a>
-    <a href="#">About us</a>
+    <a href="aboutUs.html">About us</a>
     <div class="auth-buttons">
-      <button class="login-button">Log in</button>
-      <button class="signup-button">Sign up</button>
+      <a href="loginpage.html"><button class="login-button">Log in</button>
+      <a href="Register%20Page.html"><button class="signup-button">Sign up</button>
     </div>
   </div>
 </div>
@@ -334,7 +334,7 @@
 </div>
 
 <div class="about-section">
-  <img src="REPLACETHIS" alt="Shelfeat Logo">
+  <img src="assets/Company3.jpg" alt="Shelfeat Logo">
   <div class="about-content">
     <h2>About us</h2>
     <p>Helping consumers find natural savings: grains, options, and dairy.</p>
@@ -352,17 +352,17 @@
   <h2>Offers of the week</h2>
   <div class="offer-cards">
     <div class="offer-card">
-      <img src="REPLACETHIS" alt="Milk">
+      <img src="assets/milk_placeholder.png" alt="Milk">
       <p>Fresh Milk</p>
       <p>$0</p>
     </div>
     <div class="offer-card">
-      <img src="REPLACETHIS" alt="Eggs">
+      <img src="assets/eggs_placeholder.png" alt="Eggs">
       <p>Organic Eggs</p>
       <p>$0</p>
     </div>
     <div class="offer-card">
-      <img src="REPLACETHIS" alt="Yogurt">
+      <img src="assets/yogurt_placeholder.png" alt="Yogurt">
       <p>Greek Yogurt</p>
       <p>$0</p>
     </div>
