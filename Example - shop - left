@@ -344,23 +344,42 @@
     </div>
 <script type="text/javascript" defer>
     document.addEventListener("DOMContentLoaded", function(){
-        const searchInput = document.getElementById("searchInput");
-        const productCards = document.querySelectorAll(".product-card");
-        searchInput.addEventListener("keyup", function (){
-            let filter = searchInput.value.toLowerCase();
-            productCards.forEach((card) => {
-                let productName = card.querySelector("h3").textContent.toLowerCase();
+    const searchInput = document.getElementById("searchInput");
+    const productGrid = document.querySelector(".product-grid");
+    const originalOrder = Array.from(document.querySelectorAll(".product-card")); 
 
-                if (productName.includes(filter)){
-                    card.style.visibility = "visible";
-                    card.style.opacity = "1";
-                }else {
-                    card.style.visibility = "hidden";
-                    card.style.opacity = "0";
-                }
+    searchInput.addEventListener("keyup", function (){
+        let filter = searchInput.value.toLowerCase();
+        let productCards = Array.from(document.querySelectorAll(".product-card"));
+
+        if (filter === "") {
+            productGrid.innerHTML = "";
+            originalOrder.forEach(card => {
+                card.style.display = "block"; 
+                productGrid.appendChild(card);
             });
+            return;
+        }
+
+        let matching = [];
+        let nonMatching = [];
+
+        productCards.forEach(card => {
+            let productName = card.querySelector("h3").textContent.toLowerCase();
+            if (productName.includes(filter)) {
+                matching.push(card);
+                card.style.display = "block"; 
+            } else {
+                nonMatching.push(card);
+                card.style.display = "none"; 
+            }
         });
+
+        productGrid.innerHTML = "";
+        matching.forEach(card => productGrid.appendChild(card));
     });
+});
+
 </script>
 </body>
 </html>
