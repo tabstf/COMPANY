@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shelfeat - Solutions for Businesses">
+  <meta name="keywords" content="business, plans, services, Shelfeat">
   <title>Shelfeat</title>
   <style>
     body {
@@ -39,6 +41,7 @@
       color: #4a5d23;
       padding: 5px 10px;
       border-radius: 4px;
+      transition: background-color 0.3s;
     }
 
     .nav-links a:hover {
@@ -57,6 +60,7 @@
       border: none;
       border-radius: 4px;
       cursor: pointer;
+      transition: background-color 0.3s;
     }
 
     .login-button {
@@ -79,69 +83,35 @@
 
     .hero {
       text-align: center;
-      padding: 100px 20px;
+      padding: 80px 20px;
       background-color: #f9f9f9;
-      background-image: url('REPLACETHIS');
+      background-image: url('https://via.placeholder.com/1200x600');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
+      color: #4a5d23;
     }
 
     .hero h1 {
       font-size: 48px;
       font-weight: bold;
-      color: #4a5d23;
       margin: 0;
     }
 
-    .hero p {
-      font-size: 20px;
-      color: #6f6f6f;
-      margin: 10px 0 40px;
-    }
-
-    .hero-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-    }
-
-    .hero-buttons button {
-      padding: 10px 20px;
-      font-size: 16px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-
-
-    .nav-buttons {
-      display: flex;
-      gap: 10px;
-    }
-
-    .nav-buttons button {
-      padding: 8px 16px;
-      background-color: #4a5d23;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-
-    .hero {
-      text-align: center;
-      padding: 100px 20px;
-      background-color: #f9f9f9;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
+    .hero h2 {
+      font-size: 24px;
+      margin: 10px 0 20px;
     }
 
     .plans-section {
       max-width: 800px;
       margin: 40px auto;
       text-align: center;
+    }
+
+    .plans-section h2 {
+      color: #4a5d23;
+      margin-bottom: 20px;
     }
 
     .plan-card-container {
@@ -159,12 +129,23 @@
       width: 300px;
       text-align: left;
       position: relative;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+
+    .plan-card:hover {
+      transform: translateY(-5px);
     }
 
     .plan-card h3 {
       font-size: 20px;
       color: #4a5d23;
       margin-bottom: 10px;
+    }
+
+    .plan-card p {
+      color: #6f6f6f;
+      margin-bottom: 15px;
     }
 
     .plan-card button {
@@ -174,6 +155,11 @@
       border: none;
       border-radius: 4px;
       cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .plan-card button:hover {
+      background-color: #3a4a1c;
     }
 
     .form-section {
@@ -184,6 +170,12 @@
       border: 1px solid #4a5d23;
       border-radius: 8px;
       text-align: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-section h2 {
+      color: #4a5d23;
+      margin-bottom: 20px;
     }
 
     .form-section input, .form-section textarea {
@@ -201,10 +193,30 @@
       border: none;
       border-radius: 4px;
       cursor: pointer;
+      transition: background-color 0.3s;
     }
 
     .form-section button:hover {
       background-color: #3a4a1c;
+    }
+
+    @media (max-width: 768px) {
+      .plan-card-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .plan-card {
+        width: 90%;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+      }
+
+      .hero h2 {
+        font-size: 20px;
+      }
     }
   </style>
 </head>
@@ -254,13 +266,12 @@
 
 <div class="form-section">
   <h2>Try the Model for Free</h2>
-  <form>
-    <input type="text" placeholder="Your Name" required>
-    <input type="email" placeholder="Your Email" required>
-    <input type="text" placeholder="Business Name" required>
-    <input type="text" placeholder="Location" required>
-    <input type="text" placeholder="Product for Search" required>
-    <textarea placeholder="Describe your business needs" required></textarea>
+  <form action="send_email.php" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <input type="text" name="business_name" placeholder="Business Name" required>
+    <input type="text" name="location" placeholder="Location" required>
+    <textarea name="business_needs" placeholder="Describe your business needs" required></textarea>
     <button type="submit">Submit</button>
   </form>
 </div>
