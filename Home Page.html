@@ -14,18 +14,25 @@
     }
 
     .header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background-color: #ffffff;
-      border-bottom: 1px solid #d2d6c9;
-      padding: 15px 20px;
-      display: flex;
-      align-items: center;
-      z-index: 1000;
-      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  border-bottom: 1px solid #d2d6c9;
+  padding: 15px 0px; /* Remove side padding to avoid unnecessary spacing */
+  display: flex;
+  justify-content: center; /* Centers the container */
+  z-index: 1000;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+  width: 97%; /* Prevents stretching across the entire screen */
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Keeps logo on the left, nav on the right */
+}
 
     .logo {
             display: flex;
@@ -99,7 +106,7 @@
       text-align: center;
       padding: 120px 20px;
       background-color: #f9f9f9;
-      background-image: url('REPLACETHIS');
+      background-image: url('REPLACE THIS');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -278,6 +285,7 @@
 <body>
 
 <div class="header">
+<div class="header-container">
   <div class="logo">
    <a href="Home%20Page.html"><img src="assets/logofinal.jpg" alt="Logo Placeholder"></a>
   </div>
@@ -290,6 +298,7 @@
       <a href="Register%20Page.html"><button class="signup-button">Sign up</button></a>
     </div>
   </div>
+</div>
 </div>
 
 <div class="hero">
