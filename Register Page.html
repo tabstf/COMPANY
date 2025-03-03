@@ -6,30 +6,49 @@
   <title>Register - Shelfeat</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Arial', sans-serif;
       background-color: #f9f9f9;
       margin: 0;
       padding: 0;
+      color: #333;
     }
 
-    .header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background-color: #ffffff;
-      border-bottom: 1px solid #d2d6c9;
-      padding: 10px 20px;
-      display: flex;
-      align-items: center;
-      z-index: 1000;
-      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    }
+   .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  border-bottom: 1px solid #d2d6c9;
+  padding: 15px 0px; /* Remove side padding to avoid unnecessary spacing */
+  display: flex;
+  justify-content: center; /* Centers the container */
+  z-index: 1000;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+  width: 97%; /* Prevents stretching across the entire screen */
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Keeps logo on the left, nav on the right */
+}
+
+    .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
 
     .header .nav-links {
       display: flex;
       gap: 20px;
-      font-size: 14px;
+      font-size: 16px;
       color: #4a5d23;
       margin-left: auto;
     }
@@ -37,12 +56,17 @@
     .nav-links a {
       text-decoration: none;
       color: #4a5d23;
-      padding: 5px 10px;
+      padding: 8px 12px;
       border-radius: 4px;
+      transition: background-color 0.3s;
+      display: flex; /* Use flexbox */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  height: 30px; /* Set a fixed height */
     }
 
     .nav-links a:hover {
-      background-color: #f1f1f1;
+      background-color: #e8f5e9;
     }
 
     .auth-buttons {
@@ -52,11 +76,12 @@
     }
 
     .auth-buttons button {
-      padding: 8px 12px;
+      padding: 10px 15px;
       font-size: 14px;
       border: none;
       border-radius: 4px;
       cursor: pointer;
+      transition: background-color 0.3s;
     }
 
     .login-button {
@@ -76,6 +101,7 @@
     .signup-button:hover {
       background-color: #3a4a1c;
     }
+
 
     .register-container {
       max-width: 400px;
@@ -138,15 +164,20 @@
 <body>
 
 <div class="header">
+<div class="header-container">
+  <div class="logo">
+   <a href="Home%20Page.html"><img src="assets/logofinal.jpg" alt="Logo Placeholder"></a>
+  </div>
   <div class="nav-links">
-    <a href="#">Products</a>
-    <a href="#">Businesses</a>
-    <a href="#">About us</a>
+    <a href="Consumer%20shop.html">Products</a>
+    <a href="Business%20page.html">Businesses</a>
+    <a href="aboutUs.html">About us</a>
+    <div class="auth-buttons">
+      <a href="loginpage.html"><button class="login-button">Log in</button></a>
+      <a href="Register%20Page.html"><button class="signup-button">Sign up</button></a>
+    </div>
   </div>
-  <div class="auth-buttons">
-    <button class="login-button">Log in</button>
-    <button class="signup-button">Sign up</button>
-  </div>
+</div>
 </div>
 
 <div class="register-container">
