@@ -339,6 +339,10 @@
                     <h3>Yogurt</h3>
                     <p class="price">$0</p>
                 </div>
+                <div class="product-card add-product">
+                	<img src="assets/plus_circle">
+                    <h3>Add Product</h3>
+                </div>
             </div>
         </main>
     </div>
