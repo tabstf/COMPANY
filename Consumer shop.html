@@ -75,12 +75,12 @@
         }
 
         .auth-buttons .signup {
-            background-color: #2c5e2c;
+            background-color: #28a745;
             color: #fff;
         }
 
         .auth-buttons .signup:hover {
-            background-color: #1f421f;
+            background-color: #218838;
         }
 
         .cart {
@@ -99,7 +99,7 @@
         .container {
             display: flex;
             flex: 1;
-            height: calc(100vh - 60px); /* Subtract header height */
+            height: calc(100vh - 60px);
         }
 
         .sidebar {
@@ -257,129 +257,159 @@
 
             <div class="filter-group">
                 <h3>Filter Options</h3>
-                <label><input type="checkbox"> Label 1</label>
-                <label><input type="checkbox"> Label 2</label>
-                <label><input type="checkbox"> Label 3</label>
+                <label><input type="checkbox" class="filter-checkbox"> Label 1</label>
+                <label><input type="checkbox" class="filter-checkbox"> Label 2</label>
+                <label><input type="checkbox" class="filter-checkbox"> Label 3</label>
             </div>
 
             <div class="filter-group price-slider">
                 <h3>Price</h3>
-                <input type="range" min="0" max="100" value="50">
+                <input type="range" min="0" max="100" value="50" class="price-range">
                 <span>€0 - €100</span>
             </div>
 
             <div class="filter-group expiration-date">
                 <h3>Expiration Date</h3>
-                <input type="date">
+                <input type="date" class="expiration-date-picker">
             </div>
 
             <div class="filter-group">
                 <h3>Size</h3>
-                <label><input type="checkbox"> Label 1</label>
-                <label><input type="checkbox"> Label 2</label>
-                <label><input type="checkbox"> Label 3</label>
+                <label><input type="checkbox" class="filter-checkbox"> Label 1</label>
+                <label><input type="checkbox" class="filter-checkbox"> Label 2</label>
+                <label><input type="checkbox" class="filter-checkbox"> Label 3</label>
             </div>
         </aside>
         <main>
             <div class="filter-bar">
                 <input type="text" id="searchInput" placeholder="Search">
-                <button>New</button>
-                <button>Price ascending</button>
-                <button>Price descending</button>
-                <button>Rating</button>
+                <button id="newButton">New</button>
+                <button id="priceAsc">Price ascending</button>
+                <button id="priceDesc">Price descending</button>
+                <button id="ratingButton">Rating</button>
             </div>
             <div class="product-grid">
-                <div class="product-card">
+                <div class="product-card" data-price="0.99" data-expiration="2025-04-10">
                     <img src="assets/milk_placeholder.png" alt="Product">
                     <h3>Milk</h3>
                     <p class="price">€0.99</p>
+                    <p class="expiration-date">Expires on: 2025-04-10</p>
                 </div>
-                <div class="product-card">
+                <div class="product-card" data-price="2.34" data-expiration="2025-03-05">
                     <img src="assets/eggs_placeholder.png" alt="Product">
                     <h3>Eggs</h3>
                     <p class="price">€2.34</p>
+                    <p class="expiration-date">Expires on: 2025-03-05</p>
                 </div>
-                <div class="product-card">
+                <div class="product-card" data-price="0.99" data-expiration="2025-04-10">
                     <img src="assets/milk_placeholder.png" alt="Product">
                     <h3>Milk</h3>
                     <p class="price">€0.99</p>
+                    <p class="expiration-date">Expires on: 2025-04-10</p>
                 </div>
-                <div class="product-card">
+                <div class="product-card" data-price="2.34" data-expiration="2025-03-05">
                     <img src="assets/eggs_placeholder.png" alt="Product">
                     <h3>Eggs</h3>
                     <p class="price">€2.34</p>
+                    <p class="expiration-date">Expires on: 2025-03-05</p>
                 </div>
-                <div class="product-card">
-                    <img src="assets/milk_placeholder.png" alt="Product">
-                    <h3>Milk</h3>
-                    <p class="price">€0.99</p>
-                </div>
-                <div class="product-card">
-                    <img src="assets/eggs_placeholder.png" alt="Product">
-                    <h3>Eggs</h3>
-                    <p class="price">€2.34</p>
-                </div>
-                <div class="product-card">
+                <div class="product-card" data-price="0.89" data-expiration="2025-05-15">
                     <img src="assets/bread.jpg" alt="Product">
                     <h3>Bread</h3>
                     <p class="price">€0.89</p>
+                    <p class="expiration-date">Expires on: 2025-05-15</p>
                 </div>
-                <div class="product-card">
+                <div class="product-card" data-price="1.12" data-expiration="2025-03-25">
                     <img src="assets/cheese.jpg" alt="Product">
                     <h3>Cheese</h3>
                     <p class="price">€1.12</p>
+                    <p class="expiration-date">Expires on: 2025-03-25</p>
                 </div>
-                <div class="product-card">
+                <div class="product-card" data-price="2.66" data-expiration="2025-03-15">
                     <img src="assets/butter.jpg" alt="Product">
                     <h3>Butter</h3>
                     <p class="price">€2.66</p>
+                    <p class="expiration-date">Expires on: 2025-03-15</p>
                 </div>
-                <div class="product-card">
+                <div class="product-card" data-price="1.29" data-expiration="2025-06-01">
                     <img src="assets/yogurt_placeholder.png" alt="Product">
                     <h3>Yogurt</h3>
                     <p class="price">€1.29</p>
+                    <p class="expiration-date">Expires on: 2025-06-01</p>
                 </div>
             </div>
         </main>
     </div>
-<script type="text/javascript" defer>
-    document.addEventListener("DOMContentLoaded", function(){
-    const searchInput = document.getElementById("searchInput");
-    const productGrid = document.querySelector(".product-grid");
-    const originalOrder = Array.from(document.querySelectorAll(".product-card")); 
 
-    searchInput.addEventListener("keyup", function (){
-        let filter = searchInput.value.toLowerCase();
-        let productCards = Array.from(document.querySelectorAll(".product-card"));
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const searchInput = document.getElementById("searchInput");
+            const productGrid = document.querySelector(".product-grid");
+            const originalOrder = Array.from(document.querySelectorAll(".product-card"));
 
-        if (filter === "") {
-            productGrid.innerHTML = "";
-            originalOrder.forEach(card => {
-                card.style.display = "block"; 
-                productGrid.appendChild(card);
+            searchInput.addEventListener("keyup", function () {
+                let filter = searchInput.value.toLowerCase();
+                let productCards = Array.from(document.querySelectorAll(".product-card"));
+
+                if (filter === "") {
+                    productGrid.innerHTML = "";
+                    originalOrder.forEach(card => {
+                        card.style.display = "block";
+                        productGrid.appendChild(card);
+                    });
+                    return;
+                }
+
+                let matching = [];
+                let nonMatching = [];
+
+                productCards.forEach(card => {
+                    let productName = card.querySelector("h3").textContent.toLowerCase();
+                    if (productName.includes(filter)) {
+                        matching.push(card);
+                        card.style.display = "block";
+                    } else {
+                        nonMatching.push(card);
+                        card.style.display = "none";
+                    }
+                });
+
+                productGrid.innerHTML = "";
+                matching.forEach(card => productGrid.appendChild(card));
             });
-            return;
-        }
 
-        let matching = [];
-        let nonMatching = [];
+            document.getElementById("priceAsc").addEventListener("click", function () {
+                let sortedCards = Array.from(document.querySelectorAll(".product-card")).sort((a, b) => {
+                    return parseFloat(a.getAttribute('data-price')) - parseFloat(b.getAttribute('data-price'));
+                });
+                productGrid.innerHTML = "";
+                sortedCards.forEach(card => productGrid.appendChild(card));
+            });
 
-        productCards.forEach(card => {
-            let productName = card.querySelector("h3").textContent.toLowerCase();
-            if (productName.includes(filter)) {
-                matching.push(card);
-                card.style.display = "block"; 
-            } else {
-                nonMatching.push(card);
-                card.style.display = "none"; 
-            }
+            document.getElementById("priceDesc").addEventListener("click", function () {
+                let sortedCards = Array.from(document.querySelectorAll(".product-card")).sort((a, b) => {
+                    return parseFloat(b.getAttribute('data-price')) - parseFloat(a.getAttribute('data-price'));
+                });
+                productGrid.innerHTML = "";
+                sortedCards.forEach(card => productGrid.appendChild(card));
+            });
+
+            document.querySelector('.price-range').addEventListener('input', function () {
+                const priceFilter = parseFloat(this.value);
+                document.querySelectorAll('.product-card').forEach(card => {
+                    const price = parseFloat(card.getAttribute('data-price'));
+                    card.style.display = price <= priceFilter ? 'block' : 'none';
+                });
+            });
+
+            document.querySelector('.expiration-date-picker').addEventListener('change', function () {
+                const selectedDate = new Date(this.value);
+                document.querySelectorAll('.product-card').forEach(card => {
+                    const expirationDate = new Date(card.querySelector('.expiration-date').textContent.split(':')[1].trim());
+                    card.style.display = expirationDate >= selectedDate ? 'block' : 'none';
+                });
+            });
         });
-
-        productGrid.innerHTML = "";
-        matching.forEach(card => productGrid.appendChild(card));
-    });
-});
-
-</script>
+    </script>
 </body>
 </html>
