@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login - Shelfeat</title>
+  <link href="https://fonts.cdnfonts.com/css/caviar-dreams" rel="stylesheet">
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -11,7 +12,11 @@
       margin: 0;
       padding: 0;
     }
-
+@import url('https://fonts.cdnfonts.com/css/caviar-dreams');
+           
+  *{
+    font-family: 'Caviar Dreams', sans-serif;
+  }     
        .header {
   position: fixed;
   top: 0;
@@ -209,22 +214,18 @@
   <div class="login-box">
     <h1>Login</h1>
     
-    <!-- Email Input -->
     <div class="input-group">
       <label for="email">Email</label>
       <input type="email" id="email" placeholder="Enter your email" required>
     </div>
 
-    <!-- Password Input -->
     <div class="input-group">
       <label for="password">Password</label>
       <input type="password" id="password" placeholder="Enter your password" required>
     </div>
 
-    <!-- Login Button -->
     <button class="login-btn">Log In</button>
 
-    <!-- Signup Link -->
     <div class="signup-link">
       <p>Don't have an account? <a href="#">Sign up</a></p>
     </div>
