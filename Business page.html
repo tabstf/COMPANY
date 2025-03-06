@@ -8,11 +8,13 @@
   <title>Shelfeat</title>
   <style>
     body {
-  font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
-  margin: 0;
-  padding: 0;
-}
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            opacity: 0; 
+            transition: opacity 1s ease-in; 
+        }
 
 .header {
   position: fixed;
@@ -340,6 +342,10 @@ a {
     <button type="submit">Submit</button>
   </form>
 </div>
-
+<script type="text/javascript">
+  window.onload = function () {
+            document.body.style.opacity = '1';
+        };
+</script>
 </body>
 </html>
