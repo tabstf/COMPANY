@@ -8,238 +8,274 @@
   <title>Shelfeat</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
-      margin: 0;
-      padding: 0;
-    }
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
 
-    .header {
+.header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   background-color: #ffffff;
   border-bottom: 1px solid #d2d6c9;
-  padding: 15px 0px; /* Remove side padding to avoid unnecessary spacing */
+  padding: 15px 0;
   display: flex;
-  justify-content: center; /* Centers the container */
+  justify-content: center;
   z-index: 1000;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .header-container {
-  width: 97%; /* Prevents stretching across the entire screen */
+  width: 97%;
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Keeps logo on the left, nav on the right */
+  justify-content: space-between;
 }
 
-    .logo {
-            display: flex;
-            align-items: center;
-        }
+.logo img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
 
-        .logo img {
-            width: 50px;
-            height: 50px;
-            margin-right: 10px;
-        }
+.nav-links {
+  display: flex;
+  gap: 20px;
+  font-size: 16px;
+  color: #4a5d23;
+  margin-left: auto;
+}
 
-    .header .nav-links {
-      display: flex;
-      gap: 20px;
-      font-size: 16px;
-      color: #4a5d23;
-      margin-left: auto;
-    }
+.nav-links a {
+  text-decoration: none;
+  color: #4a5d23;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
 
-    .nav-links a {
-      text-decoration: none;
-      color: #4a5d23;
-      padding: 8px 12px;
-      border-radius: 4px;
-      transition: background-color 0.3s;
-      display: flex; /* Use flexbox */
-  align-items: center; /* Center vertically */
-  justify-content: center; /* Center horizontally */
-  height: 30px; /* Set a fixed height */
-    }
+.nav-links a:hover {
+  background-color: #e8f5e9;
+}
 
-    .nav-links a:hover {
-      background-color: #e8f5e9;
-    }
+.auth-buttons {
+  display: flex;
+  gap: 10px;
+  margin-left: 20px;
+}
 
-    .auth-buttons {
-      display: flex;
-      gap: 10px;
-      margin-left: 20px;
-    }
+.auth-buttons button {
+  padding: 10px 15px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
 
-    .auth-buttons button {
-      padding: 10px 15px;
-      font-size: 14px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
+.login-button {
+  background-color: #e5e5e5;
+  color: #333;
+}
 
-    .login-button {
-      background-color: #e5e5e5;
-      color: #333;
-    }
+.login-button:hover {
+  background-color: #d4d4d4;
+}
 
-    .login-button:hover {
-      background-color: #d4d4d4;
-    }
+.signup-button {
+  background-color: #4a5d23;
+  color: #ffffff;
+}
 
-    .signup-button {
-      background-color: #4a5d23;
-      color: #ffffff;
-    }
+.signup-button:hover {
+  background-color: #3a4a1c;
+}
 
-    .signup-button:hover {
-      background-color: #3a4a1c;
-    }
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 120px 20px;
+  background-color: #f9f9f9;
+  background-image: url('https://via.placeholder.com/1200x600');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #4a5d23;
+  display: block;
+}
 
-    .hero {
-      text-align: center;
-      padding: 120px 20px;
-      background-color: #f9f9f9;
-      background-image: url('https://via.placeholder.com/1200x600');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      color: #4a5d23;
-    }
+.hero h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin: 0;
+}
 
-    .hero h1 {
-      font-size: 48px;
-      font-weight: bold;
-      margin: 0;
-    }
+.hero h2 {
+  font-size: 24px;
+  margin: 10px 0 20px;
+}
 
-    .hero h2 {
-      font-size: 24px;
-      margin: 10px 0 20px;
-    }
+/* Browse Button */
+.browse-button {
+  display: block;
+  margin: 0 auto; /* Center the button */
+  padding: 15px 30px;
+  background-color: #4a5d23;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 20px;
+  width: auto;
+  margin-top: 20px;
+}
 
-    .plans-section {
-      max-width: 800px;
-      margin: 40px auto;
-      text-align: center;
-    }
+.browse-button:hover {
+  background-color: #3a4a1c;
+}
 
-    .plans-section h2 {
-      color: #4a5d23;
-      margin-bottom: 20px;
-    }
+/* Plans Section */
+.plans-section {
+  max-width: 800px;
+  margin: 40px auto;
+  text-align: center;
+}
 
-    .plan-card-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
+.plans-section h2 {
+  color: #4a5d23;
+  margin-bottom: 20px;
+}
 
-    .plan-card {
-      background-color: #ffffff;
-      border: 1px solid #4a5d23;
-      border-radius: 8px;
-      padding: 20px;
-      width: 300px;
-      text-align: left;
-      position: relative;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s;
-    }
+.plan-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
 
-    .plan-card:hover {
-      transform: translateY(-5px);
-    }
+.plan-card {
+  background-color: #ffffff;
+  border: 1px solid #4a5d23;
+  border-radius: 8px;
+  padding: 20px;
+  width: 300px;
+  text-align: left;
+  position: relative;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
 
-    .plan-card h3 {
-      font-size: 20px;
-      color: #4a5d23;
-      margin-bottom: 10px;
-    }
+.plan-card:hover {
+  transform: translateY(-5px);
+}
 
-    .plan-card p {
-      color: #6f6f6f;
-      margin-bottom: 15px;
-    }
+.plan-card h3 {
+  font-size: 20px;
+  color: #4a5d23;
+  margin-bottom: 10px;
+}
 
-    .plan-card button {
-      padding: 8px 16px;
-      background-color: #4a5d23;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
+.plan-card p {
+  color: #6f6f6f;
+  margin-bottom: 15px;
+}
 
-    .plan-card button:hover {
-      background-color: #3a4a1c;
-    }
+.plan-card button {
+  padding: 8px 16px;
+  background-color: #4a5d23;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
 
-    .form-section {
-      max-width: 500px;
-      margin: 40px auto;
-      padding: 20px;
-      background-color: #ffffff;
-      border: 1px solid #4a5d23;
-      border-radius: 8px;
-      text-align: center;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
+.plan-card button:hover {
+  background-color: #3a4a1c;
+}
 
-    .form-section h2 {
-      color: #4a5d23;
-      margin-bottom: 20px;
-    }
+/* Form Section */
+.form-section {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #4a5d23;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
 
-    .form-section input, .form-section textarea {
-      width: 100%;
-      padding: 10px;
-      margin: 10px 0;
-      border: 1px solid #d2d6c9;
-      border-radius: 4px;
-    }
+.form-section h2 {
+  color: #4a5d23;
+  margin-bottom: 20px;
+}
 
-    .form-section button {
-      padding: 10px 20px;
-      background-color: #4a5d23;
-      color: #ffffff;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
+.form-section input,
+.form-section textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #d2d6c9;
+  border-radius: 4px;
+}
 
-    .form-section button:hover {
-      background-color: #3a4a1c;
-    }
+.form-section button {
+  padding: 10px 20px;
+  background-color: #4a5d23;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
 
-    @media (max-width: 768px) {
-      .plan-card-container {
-        flex-direction: column;
-        align-items: center;
-      }
+.form-section button:hover {
+  background-color: #3a4a1c;
+}
 
-      .plan-card {
-        width: 90%;
-      }
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+  .plan-card-container {
+    flex-direction: column;
+    align-items: center;
+  }
 
-      .hero h1 {
-        font-size: 36px;
-      }
+  .plan-card {
+    width: 90%;
+  }
 
-      .hero h2 {
-        font-size: 20px;
-      }
-    }
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .hero h2 {
+    font-size: 20px;
+  }
+
+  .browse-button {
+  display: block;
+  margin: 0 auto; 
+  padding: 15px 30px;
+  background-color: #4a5d23;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 20px;
+  width: auto;
+  margin-top: 5px; 
+}
+
+a {
+  text-decoration: none; 
+}
+
   </style>
 </head>
 <body>
@@ -265,7 +301,9 @@
   <h1>Welcome to Shelfeat</h1>
   <h2>For Businesses</h2>
 </div>
-
+<a href="Business%20products.html">
+  <button class="browse-button">Browse My Products</button>
+</a>
 <div class="plans-section">
   <h2>Fixed Plans for Businesses</h2>
   <div class="plan-card-container">
