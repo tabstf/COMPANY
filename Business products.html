@@ -256,6 +256,15 @@
     color: #d9f0d9;
 }
 
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    opacity: 0; 
+    transition: opacity 1s ease-in; 
+}
+
     </style>
 </head>
 <body>
@@ -481,6 +490,12 @@
         closeTipButton.addEventListener("click", closeTipBanner);
 
         updateTip();
+
+
+    window.onload = function () {
+        document.body.style.opacity = '1';
+    };
+
     </script>
 </body>
 </html>
