@@ -75,12 +75,12 @@
         }
 
         .auth-buttons .signup {
-            background-color: #4CAF50; /* Green button */
+            background-color: #4CAF50; 
             color: white;
         }
 
         .auth-buttons .signup:hover {
-            background-color: #45a049; /* Darker green on hover */
+            background-color: #45a049; 
         }
 
         .cart {
@@ -226,9 +226,46 @@
             margin-top: 5px;
             font-weight: bold;
         }
+        .tip-banner {
+        position: fixed;
+        top: 60px; 
+        left: 0;
+        right: 0;
+        background-color: #2c5e2c;
+        color: white;
+        text-align: center;
+        padding: 15px;
+        font-size: 18px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1001;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+.tip-banner .arrow-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.tip-banner .arrow-btn:hover {
+    color: #d9f0d9;
+}
+
     </style>
 </head>
 <body>
+<div class="tip-banner">
+        <span class="arrow" id="prevTip">&#8592;</span>
+        <div class="tip-content" id="tipText">Loading tips...</div>
+        <span class="arrow" id="nextTip">&#8594;</span>
+        <span class="close" id="closeTip">&#10005;</span>
+    </div>
+
     <header>
         <div class="logo">
             <img src="assets/logofinal.jpg" alt="Logo Placeholder">
@@ -401,6 +438,49 @@
             grid.innerHTML = '';
             sortedCards.forEach(card => grid.appendChild(card));
         });
+
+     const tips = [
+            "Tip 1: Based on our predictions for the upcoming season, we anticipate that our stock will increase by approximately 20% compared to last season. This means you will have 20% more inventory available, allowing for better met customer demand.",
+            "Tip 2: Current demand projections indicate that milk will have higher demand than the available stock for the upcoming season. To ensure customer needs are met, we recommend increasing the milk stock for the next season.",
+            "Tip 3: Your current stock of bread is nearing its expiration date sooner than expected, which could lead to potential waste. We recommend reviewing the stock levels and adjusting for a fresher batch to minimize losses and maximize sales during the upcoming season!"
+        ];
+
+        let currentTipIndex = 0;
+        const tipTextElement = document.getElementById("tipText");
+        const nextTipBtn = document.getElementById("nextTip");
+        const prevTipBtn = document.getElementById("prevTip");
+        const closeTipButton = document.getElementById("closeTip");
+
+        function updateTip() {
+            tipTextElement.textContent = tips[currentTipIndex];
+        }
+
+        function showNextTip() {
+            currentTipIndex++;
+            if (currentTipIndex >= tips.length) {
+                document.querySelector(".tip-banner").style.display = "none"; 
+            } else {
+                updateTip();
+            }
+        }
+
+        function showPrevTip() {
+            currentTipIndex--;
+            if (currentTipIndex < 0) {
+                currentTipIndex = tips.length - 1; 
+            }
+            updateTip();
+        }
+
+        function closeTipBanner() {
+            document.querySelector(".tip-banner").style.display = "none";
+        }
+
+        nextTipBtn.addEventListener("click", showNextTip);
+        prevTipBtn.addEventListener("click", showPrevTip);
+        closeTipButton.addEventListener("click", closeTipBanner);
+
+        updateTip();
     </script>
 </body>
 </html>
