@@ -50,10 +50,10 @@
 
 .nav-links {
   display: flex;
-  gap: 20px;
   font-size: 16px;
   color: #4a5d23;
   margin-left: auto;
+  align-items: center;
 }
 
 .nav-links a {
@@ -135,7 +135,6 @@
   background-color: #3a4a1c;
 }
 
-/* Plans Section */
 .plans-section {
   max-width: 800px;
   margin: 40px auto;
@@ -160,7 +159,7 @@
   border-radius: 8px;
   padding: 20px;
   width: 300px;
-  text-align: left;
+  text-align: center;
   position: relative;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
@@ -189,6 +188,8 @@
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s;
+  align-self: center; 
+  margin: 0 auto; 
 }
 
 .plan-card button:hover {
@@ -213,7 +214,7 @@
 
 .form-section input,
 .form-section textarea {
-  width: 100%;
+  width: 88%;
   padding: 10px;
   margin: 10px 0;
   border: 1px solid #d2d6c9;
@@ -241,8 +242,21 @@
   }
 
   .plan-card {
-    width: 90%;
-  }
+    background-color: #ffffff;
+    border: 1px solid #4a5d23;
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px;
+    text-align: center; 
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: space-between; 
+    height: 100%; 
+    }
 
   .hero h1 {
     font-size: 36px;
@@ -268,13 +282,14 @@
 }
 
   .hero-content{
-    background-color: rgba(128, 128, 128, 0.7);
-    padding: 20px 40px;
-    display: inline-block;
-    border-radius: 8px;
-    text-align: center;
-    color:white;
-    z-index: 2;
+    background-color: rgba(128, 128, 128, 0.7); /* Transparent gray */
+    padding: 20px 40px; /* Add padding for spacing */
+    display: inline-block; /* Center the box */
+    border-radius: 8px; /* Rounded corners */
+    text-align: center; /* Center text */
+    color: white; /* Text color */
+    z-index: 2; /* Ensure it appears above the background */
+    position: relative;
   }
 
 
@@ -293,7 +308,7 @@ a {
   </div>
   <div class="nav-links">
     <a href="Consumer%20Shop.html">Products</a>
-    <a href="#">Businesses</a>
+    <a href="Business%20page.html">Businesses</a>
     <a href="aboutUs.html">About us</a>
     <div class="auth-buttons">
       <a href="loginpage.html"><button class="login-button">Log in</button></a>
@@ -316,13 +331,21 @@ a {
   <h2>Fixed Plans for Businesses</h2>
   <div class="plan-card-container">
     <div class="plan-card">
-      <h3>Standard 🏅</h3>
-      <p>Body text for whatever you’d like to say. Add main takeaway points, quotes, anecdotes, or even a very very short story.</p>
+      <h2 style="text-align: center;">Standard🏅</h2>
+      <h3 style="text-align: center; color: #4a5d23;">200€/month</h3>
+      <p>Access to basic stock control functions.</p>
+      <p>Standardized features such as keeping track of expiry dates of products. </p>
+      <p>100 SKUs tracked and on the market (0.40€/additional SKU tracked)</p>
+      <p>100 SKU AI-driven recommendations (0.50€/additional SKU analyzed)</p>
       <button>Take me there</button>
     </div>
     <div class="plan-card">
-      <h3>Premium 👑</h3>
-      <p>Body text for whatever you’d like to say. Add main takeaway points, quotes, anecdotes, or even a very very short story.</p>
+      <h2 style="text-align: center;">Premium 👑</h2>
+      <h3 style="text-align: center;">400€/month</h3>
+      <p>Advanced analytics specific to the business such as <i>historical tracking</i>, and<i> demand level predictions</i></p>
+      <p>AI-powered stock control and waste management insights.</p>
+      <p>250 SKUs tracked and on the market (0.30€/additional SKU tracked)</p>
+      <p>200 SKU AI-driven insights (0.40€/additional SKU analyzed)</p>
       <button>I want to be a VIP</button>
     </div>
   </div>
@@ -330,8 +353,11 @@ a {
   <h2>Custom Plans for Businesses</h2>
   <div class="plan-card-container">
     <div class="plan-card">
-      <h3>Custom Plan for VIP Customers 📜</h3>
-      <p>Body text for whatever you’d like to say. Add main takeaway points, quotes, anecdotes, or even a very very short story.</p>
+      <h3>Enterprise📜</h3>
+      <p>Full suit of AI-powered tools for detailed forecasting</p>
+      <p>Priority costumer support and contact with developers</p>
+      <p>Unlimited SKUs tracked and on the market</p>
+      <p>Number of SKU AI-driven recommendations negotiatied with us</p>
       <button>Take me there</button>
     </div>
   </div>
